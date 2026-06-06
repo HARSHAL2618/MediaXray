@@ -1,0 +1,15 @@
+{
+    "model_type": "MobileNetV2",
+    "input_size": [
+        224,
+        224
+    ],
+    "threshold": 0.5,
+    "classes": {
+        "0": "REAL",
+        "1": "FAKE"
+    },
+    "metrics": {
+        "val_auc": 0.9156225919723511
+    }
+}

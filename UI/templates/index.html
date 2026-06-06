@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>MediaXray | Synthetic Media Detector</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+    <div class="background-glow"></div>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="logo">
+            <span class="logo-icon">◉</span>
+            MediaXray
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="#modules">Modules</a></li>
+            <li><a href="#about">About</a></li>
+        </ul>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>See Beyond Reality</h1>
+            <p>
+                AI-powered synthetic media detection system for images,
+                videos, audio and text.
+            </p>
+
+            <a href="#modules" class="hero-btn">Start Detection</a>
+        </div>
+    </section>
+
+    <!-- MODULES -->
+    <section class="modules" id="modules">
+
+        <!-- IMAGE -->
+        <div class="module-card">
+            <h2>🖼 Image Detector</h2>
+
+            <div class="upload-box">
+                <input type="file" id="imageInput" accept="image/*">
+            </div>
+
+            <button onclick="detectImage()">Analyze Image</button>
+
+            <div class="loader" id="imageLoader"></div>
+
+            <div class="result-box" id="imageResult"></div>
+        </div>
+
+        <!-- VIDEO -->
+        <div class="module-card">
+            <h2>🎥 Video Detector</h2>
+
+            <div class="upload-box">
+                <input type="file" id="videoInput" accept="video/*">
+            </div>
+
+            <button onclick="detectVideo()">Analyze Video</button>
+
+            <div class="loader" id="videoLoader"></div>
+
+            <div class="result-box" id="videoResult"></div>
+        </div>
+
+        <!-- AUDIO -->
+        <div class="module-card">
+            <h2>🎧 Audio Detector</h2>
+
+            <div class="upload-box">
+                <input type="file" id="audioInput" accept="audio/*">
+            </div>
+
+            <button onclick="detectAudio()">Analyze Audio</button>
+
+            <div class="loader" id="audioLoader"></div>
+
+            <div class="result-box" id="audioResult"></div>
+        </div>
+
+        <!-- TEXT -->
+        <div class="module-card text-module">
+            <h2>📝 Text Detector</h2>
+
+            <textarea
+                id="textInput"
+                placeholder="Paste text here..."
+            ></textarea>
+
+            <button onclick="detectText()">Analyze Text</button>
+
+            <div class="loader" id="textLoader"></div>
+
+            <div class="result-box" id="textResult"></div>
+        </div>
+
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about" id="about">
+        <h2>About MediaXray</h2>
+
+        <p>
+            MediaXray is an AI-powered synthetic media detection platform
+            designed to identify AI-generated content including deepfake
+            images, manipulated videos, synthetic audio, and machine-generated text.
+        </p>
+
+        <div class="tech-stack">
+            <span>TensorFlow</span>
+            <span>Flask</span>
+            <span>PyTorch</span>
+            <span>OpenCV</span>
+            <span>Transformers</span>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 MediaXray | AI Against AI</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+</html>

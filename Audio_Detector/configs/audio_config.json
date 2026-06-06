@@ -1,0 +1,21 @@
+{
+    "input_shape": [
+        128,
+        128,
+        3
+    ],
+    "architecture": "MobileNetV2",
+    "task": "binary",
+    "threshold": 0.5,
+    "classes": {
+        "0": "REAL",
+        "1": "FAKE"
+    },
+    "best_val_auc": 1.0,
+    "best_val_acc": 1.0,
+    "test_accuracy": 0.992,
+    "test_auc": 0.9973,
+    "test_precision": 0.9842,
+    "test_recall": 1.0,
+    "test_f1": 0.99
+}
