@@ -1,0 +1,10 @@
+{
+  "builder": "dockerfile",
+  "deployment": {
+    "startCommand": "python app.py",
+    "environmentVariables": {
+      "FLASK_ENV": "production",
+      "PORT": "5000"
+    }
+  }
+}
